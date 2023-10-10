@@ -1,3 +1,6 @@
+import math
+from math import pi
+
 from PIL import Image
 
 width, height = 500, 400
@@ -31,7 +34,11 @@ def kresli_graf(obr, min_x, max_x, min_y, max_y):
     for i in range(poc_del):
         vyska_diel = int(obr.height / poc_del)
         horizontalna_ciara(obr, 0, i, vyska_diel)
-
+    # sin
+    for x in range(0, obr.width):
+        x2 = int((2 * pi) / obr.width * x)
+        y = math.sin(x2)
+        obr.putpixel((x2, y), (255,255,255))
 
 kresli_graf(image, -1, 8, -1, 1)
 image.show()
