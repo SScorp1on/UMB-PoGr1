@@ -31,8 +31,5 @@ def kresli():
 
 
 obr = Image.new('RGB', (width, height))
-#horizontalna_ciara(0, width, 20)
-#vertikalna_ciara(100, 0, height)
 kresli()
-#obdlznik(150, 10, 50, 50)
 obr.show()
